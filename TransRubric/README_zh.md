@@ -6,10 +6,10 @@ TransRubric 是一种基于 Rubric 的 LLM-as-a-Judge 翻译评估方法，用�
 
 本仓库发布用于应用 TransRubric 的配套资源：基于 FLORES-200 和 WMT26 GenMT 构建的三个测试集样本级 Rubric、翻译 Rubric 构建 Prompt，以及 Pointwise 翻译 Judge Prompt。原文、参考译文、任务指令和测试集特有元数据来自对应的上游测试集；样本级 `rubric` 字段是本次新增的评估资源。
 
-## 本次发布资源
+## 发布的 Rubric 资源
 
 | 文件 | 上游测试集 | 覆盖范围 | 翻译方向/语言对 | 样本数 |
-| --- | --- | ---: | ---: | ---: |
+| --- | --- | --- | --- | ---: |
 | `testsets/flores200_33langs_rubric.jsonl` | FLORES-200 | 33 种语言 | 1,056 个方向 | 106,656 |
 | `testsets/flores200_low_resource_rubric.jsonl` | FLORES-200 | 64 种与中文或英语配对的额外低资源语言 | 256 个方向 | 25,856 |
 | `testsets/wmt26_genmt_rubric.jsonl` | WMT26 GenMT | 20 个语言对 | 20 个语言对 | 4,303 |

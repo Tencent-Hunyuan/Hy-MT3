@@ -6,10 +6,10 @@ TransRubric is a rubric-based LLM-as-a-judge evaluation method for fine-grained 
 
 This repository releases resources for applying TransRubric: sample-specific rubrics for three test sets derived from FLORES-200 and WMT26 GenMT, prompt templates for constructing translation rubrics, and the pointwise translation judge prompt. The source texts, references, instructions, and benchmark-specific metadata come from the corresponding upstream benchmarks; the sample-specific `rubric` field is the added evaluation resource.
 
-## Resources in This Release
+## Released Rubric Resources
 
 | File | Upstream benchmark | Coverage | Directions / pairs | Samples |
-| --- | --- | ---: | ---: | ---: |
+| --- | --- | --- | --- | ---: |
 | `testsets/flores200_33langs_rubric.jsonl` | FLORES-200 | 33 languages | 1,056 directions | 106,656 |
 | `testsets/flores200_low_resource_rubric.jsonl` | FLORES-200 | 64 additional lower-resource languages paired with Chinese or English | 256 directions | 25,856 |
 | `testsets/wmt26_genmt_rubric.jsonl` | WMT26 GenMT | 20 language pairs | 20 pairs | 4,303 |
