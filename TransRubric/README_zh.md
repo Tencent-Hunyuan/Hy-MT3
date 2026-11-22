@@ -141,4 +141,4 @@ TransRubric/
 
 - NLLB Team et al. (2022). *No Language Left Behind: Scaling Human-Centered Machine Translation*.
 - Kocmi et al. (2026). *Findings of the WMT26 General Machine Translation Shared Task: Contrastive Dynamic Human Evaluation at Scale*.
-- Li, Z., Zheng, M., Song, M., and Fei, T. (2026). [*HardMTBench: Stress-Testing Chinese-English Translation on Knowledge-Intensive Domains*](https://arxiv.org/abs/2605.28315). arXiv:2605.28315.
+- Li, Z., Zheng, M., Song, M., and Fei, T. (2026). [*HardMTBench: Stress-Testing Chinese-English Translation on Knowledge-Intensive Domains*](https://aclanthology.org/2026.findings-emnlp.235/). In *Findings of the Association for Computational Linguistics: EMNLP 2026*, pages 4947–4957, Budapest, Hungary. Association for Computational Linguistics.
