@@ -4,7 +4,7 @@ English | [中文](README_zh.md)
 
 TransRubric is a rubric-based LLM-as-a-judge evaluation method for fine-grained and interpretable translation quality assessment. Given a translation task, a candidate translation, and a task-specific rubric, a TransRubric judge identifies concrete issues with their error categories and severity levels, and produces a pointwise translation quality score on a 0–100 scale.
 
-This repository releases resources for applying TransRubric: sample-specific rubrics for three test sets derived from FLORES-200 and WMT26 GenMT, prompt templates for constructing translation rubrics, and the pointwise translation judge prompt. The source texts, references, instructions, and benchmark-specific metadata come from the corresponding upstream benchmarks; the sample-specific `rubric` field is the added evaluation resource.
+This repository releases resources for applying TransRubric: sample-specific rubrics for four test sets derived from FLORES-200, WMT26 GenMT, and HardMTBench, prompt templates for constructing translation rubrics, and the pointwise translation judge prompt. The source texts, references, instructions, and benchmark-specific metadata come from the corresponding upstream benchmarks; the sample-specific `rubric` field is the added evaluation resource.
 
 ## Released Rubric Resources
 
@@ -13,6 +13,7 @@ This repository releases resources for applying TransRubric: sample-specific rub
 | `testsets/flores200_33langs_rubric.jsonl` | FLORES-200 | 33 languages | 1,056 directions | 106,656 |
 | `testsets/flores200_low_resource_rubric.jsonl` | FLORES-200 | 64 additional lower-resource languages paired with Chinese or English | 256 directions | 25,856 |
 | `testsets/wmt26_genmt_rubric.jsonl` | WMT26 GenMT | 20 language pairs | 20 pairs | 4,303 |
+| `testsets/hardmtbench_rubric.jsonl` | HardMTBench | 12 knowledge-intensive domains, Chinese and English | 2 directions | 20,000 |
 
 The WMT26 GenMT subset excludes English-to-Ligurian, English-to-Ladin, and English-to-Northern-Sami.
 
@@ -23,8 +24,8 @@ Each JSONL record follows the same top-level schema:
 | Field | Type | Description |
 | --- | --- | --- |
 | `id` | string | Unique sample identifier. WMT26 IDs are inherited from `doc_id`; FLORES IDs are generated from record order in the released files. |
-| `benchmark` | string | Upstream benchmark: `flores200` or `wmt26`. |
-| `subset` | string | Benchmark subset: `33langs`, `low_resource`, or `genmt`. |
+| `benchmark` | string | Upstream benchmark: `flores200`, `wmt26`, or `hardmtbench`. |
+| `subset` | string | Benchmark subset: `33langs`, `low_resource`, `genmt`, or `full`. |
 | `source_language` | string | Source-language name or code retained from the upstream data. |
 | `target_language` | string | Target-language name or code retained from the upstream data. |
 | `source_text` | string | Source text to translate. |
@@ -34,7 +35,9 @@ Each JSONL record follows the same top-level schema:
 | `rubric` | list[string] | Sample-specific evaluation criteria added by TransRubric. |
 | `meta` | object | Benchmark-specific upstream metadata. |
 
-Language identifiers retain the representation used by each upstream benchmark. FLORES uses language names in Chinese, while WMT26 uses language-script codes.
+Language identifiers retain the representation used by each upstream benchmark. FLORES uses language names in Chinese, WMT26 uses language-script codes, and HardMTBench uses `Chinese` and `English`.
+
+For HardMTBench, `meta` retains the upstream `pair_id`, translation direction, domain and sub-domain, domain keywords, bilingual terminology, and difficulty scores. The released file excludes rubric-construction candidates and model-generation artifacts such as `response_list` and `model_res`.
 
 Example:
 
@@ -120,15 +123,17 @@ TransRubric/
 └── testsets/
     ├── flores200_33langs_rubric.jsonl
     ├── flores200_low_resource_rubric.jsonl
-    └── wmt26_genmt_rubric.jsonl
+    ├── wmt26_genmt_rubric.jsonl
+    └── hardmtbench_rubric.jsonl
 ```
 
 ## Data Sources
 
-The test data is derived from the open-source FLORES-200 and WMT26 GenMT benchmarks. The released files retain their source texts, references, instructions, and benchmark-specific metadata, while adding sample-specific rubrics and a unified release schema.
+The test data is derived from the open-source FLORES-200, WMT26 GenMT, and HardMTBench benchmarks. The released files retain their source texts, references, instructions, and benchmark-specific metadata, while adding sample-specific rubrics and a unified release schema.
 
 - [FLORES-200](https://github.com/facebookresearch/flores)
 - [WMT26 General Machine Translation Shared Task](https://github.com/wmt-conference/wmt26-general-mt)
+- [HardMTBench](https://github.com/jasonNLP/HardMTBench)
 
 ## References
 
@@ -136,3 +141,4 @@ If you use a TransRubric test set, please also cite its corresponding upstream b
 
 - NLLB Team et al. (2022). *No Language Left Behind: Scaling Human-Centered Machine Translation*.
 - Kocmi et al. (2026). *Findings of the WMT26 General Machine Translation Shared Task: Contrastive Dynamic Human Evaluation at Scale*.
+- Li, Z., Zheng, M., Song, M., and Fei, T. (2026). [*HardMTBench: Stress-Testing Chinese-English Translation on Knowledge-Intensive Domains*](https://arxiv.org/abs/2605.28315). arXiv:2605.28315.
