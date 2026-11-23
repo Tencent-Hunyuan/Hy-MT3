@@ -17,7 +17,7 @@
 </div>
 
 <p align="center">
-    🖥️&nbsp;<a href="https://aistudio.tencent.com/llm/en?tabIndex=0"><b>Official Website</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    🖥️&nbsp;<a href="https://aistudio.tencent.ai/chat/HunyuanDefault?from=modelSquare&modelId=hunyuan-translation-pro-chat-g"><b>Official Website</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
     💬&nbsp;<a href="https://github.com/Tencent-Hunyuan/Hy-MT3"><b>GitHub</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
     📚&nbsp;<a href="https://arxiv.org/pdf/2611.27673"><b>Hy-MT3 Report</b></a></p>
 
