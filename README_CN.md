@@ -19,7 +19,7 @@
 <p align="center">
     🖥️&nbsp;<a href="https://aistudio.tencent.com/llm/zh?tabIndex=0"><b>官方网站</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
     💬&nbsp;<a href="https://github.com/Tencent-Hunyuan/Hy-MT3"><b>GitHub</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    📚&nbsp;<b>Hy-MT3报告（即将发布）</b></p>
+    📚&nbsp;<a href="https://arxiv.org/pdf/2611.27673"><b>Hy-MT3报告</b></a></p>
 
 
 ## 模型介绍
@@ -56,7 +56,7 @@ Hy-MT3-30B-A3B 仅激活 3B 参数，**在所有非思考（快思考）模式�
 
 上图展示了通用翻译质量与推理计算量的关系。横轴为每个测试样本的预估推理计算量（TFLOPs，对数坐标），约等于 2 × 激活参数量 × 生成 token 数（含思考 token）；纵轴为通用翻译的 TransRubric 平均分。箭头连接同一模型的非思考与思考模式；水平虚线为未公开参数量的闭源模型。Hy-MT3 系列位于左上方的前沿：Hy-MT3-30B-A3B 每个样本的计算量不到 1 TFLOP，却超过了计算量是其 30 倍以上的模型，例如非思考模式下的 Qwen3.8-Max 和 Kimi-K3.1-Pro。
 
-更多的实验效果和分析可以参考我们的报告（即将发布）。
+更多的实验效果和分析可以参考我们的[报告](https://arxiv.org/pdf/2611.27673)。
 
 &nbsp;
 
@@ -307,11 +307,14 @@ Hy-MT3 共支持 102 个语种，包括 Hy-MT2 已支持的 38 个语种和 64 �
 ## 引用 Hy-MT3
 
 ```bibtex
-@misc{hymt3,
+@misc{zheng2026hymt3accuraterobust,
       title={Hy-MT3: More Accurate, Robust and Practical Multilingual Translation Models in the Wild}, 
-      author={Tencent Hunyuan Team},
+      author={Mao Zheng and Zheng Li and Fangxu Liu and Tao Chen and Bingxin Qu and Bo Lv and Mingrui Sun and Hongyu Li and Hong Huang and Jinlong Song and Decheng Wu and Guanghua Yu},
       year={2026},
-      howpublished={\url{https://github.com/Tencent-Hunyuan/Hy-MT3}}, 
+      eprint={2611.27673},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2611.27673}, 
 } 
 ```
 

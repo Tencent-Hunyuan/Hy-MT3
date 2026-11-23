@@ -19,7 +19,7 @@
 <p align="center">
     🖥️&nbsp;<a href="https://aistudio.tencent.com/llm/en?tabIndex=0"><b>Official Website</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
     💬&nbsp;<a href="https://github.com/Tencent-Hunyuan/Hy-MT3"><b>GitHub</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    📚&nbsp;<b>Hy-MT3 Report (coming soon)</b></p>
+    📚&nbsp;<a href="https://arxiv.org/pdf/2611.27673"><b>Hy-MT3 Report</b></a></p>
 
 ## Model Introduction
 
@@ -56,7 +56,7 @@ General Translation is the average over FLORES-200, FLORES-200 low-resource, WMT
 
 The figure above plots general translation quality against inference compute. The x-axis is the estimated inference compute per test sample, approximately 2 × activated parameters × generated tokens (including thinking tokens), in log scale; the y-axis is the average TransRubric score on general translation. Arrows connect the non-thinking and thinking modes of the same model; dashed horizontal lines denote closed-source models whose sizes are undisclosed. Hy-MT3 models lie on the upper-left frontier: Hy-MT3-30B-A3B requires less than 1 TFLOP per sample, yet outperforms models that consume more than 30× its compute, such as Qwen3.8-Max and Kimi-K3.1-Pro in non-thinking mode.
 
-For more experimental results and analysis, please refer to our report (coming soon).
+For more experimental results and analysis, please refer to our [report](https://arxiv.org/pdf/2611.27673).
 
 &nbsp;
 
@@ -308,11 +308,14 @@ Hy-MT3 supports 102 languages, including the 38 languages already supported by H
 ## Citing Hy-MT3
 
 ```bibtex
-@misc{hymt3,
+@misc{zheng2026hymt3accuraterobust,
       title={Hy-MT3: More Accurate, Robust and Practical Multilingual Translation Models in the Wild}, 
-      author={Tencent Hunyuan Team},
+      author={Mao Zheng and Zheng Li and Fangxu Liu and Tao Chen and Bingxin Qu and Bo Lv and Mingrui Sun and Hongyu Li and Hong Huang and Jinlong Song and Decheng Wu and Guanghua Yu},
       year={2026},
-      howpublished={\url{https://github.com/Tencent-Hunyuan/Hy-MT3}}, 
+      eprint={2611.27673},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2611.27673}, 
 } 
 ```
 
