@@ -30,7 +30,7 @@ Hy-MT3 是混元多语言翻译模型家族的第三代，涵盖 1.8B、7B 和 3
 Hy-MT3-30B-A3B 仅激活 3B 参数，**在所有非思考（快思考）模式的模型中取得最佳综合效果**，超过 Qwen3.8-Max、Kimi-K3.1-Pro、DeepSeek-V4.1-Flash 等旗舰模型，接近 GPT-6.1-Sol、Gemini-4-Argon 等同期最强的闭源思考模型，并超过了推理计算量是自身 **30 倍以上**的模型。轻量级的 Hy-MT3-1.8B 在通用翻译上也超过了讯飞翻译、微软翻译、Qwen-MT-Flash 等商业翻译 API。
 
 在通用翻译之外，Hy-MT3 针对两个产业场景做了优化：
-* **游戏本地化**：携手王者荣耀团队，借助优质的游戏垂类数据与专业评测体系，Hy-MT3-30B-A3B 在脱靶率、占位符错误、富文本错误和术语错误等核心指标上全面持平或优于 Gemini 3.1 Pro 等强闭源模型，并可通过开源的[游戏翻译工具链](https://github.com/Tencent/TiMiHOKGameTranslator)无缝接入游戏研发流程。
+* **游戏本地化**：携手王者荣耀团队，借助优质的游戏垂类数据与专业评测体系，Hy-MT3-30B-A3B 在脱靶率、占位符错误、富文本错误和术语错误等核心指标上全面持平或优于 Gemini 3.1 Pro 等强闭源模型，并可通过开源的游戏翻译工具链 [TiMiHOKGameTranslator](https://github.com/Tencent/TiMiHOKGameTranslator) 无缝接入游戏研发流程。
 * **图片翻译**：针对 OCR 级联的图片翻译场景，Hy-MT3 提升了上下文理解与纠错能力，更好地适应 OCR 识别错误，在 VISTA-Bench 上效果达到同尺寸模型最强。
 
 同时，本次我们也开源了基于评分细则（rubric）的翻译自动评估方案 [TransRubric](./TransRubric/README_zh.md)，它在 WMT26 翻译评估赛道测试集上的效果超过其他评估方案，相对人工评估的稳定性更高，准确率也高于大多数专业标注员。
