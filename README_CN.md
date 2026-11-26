@@ -35,6 +35,8 @@ Hy-MT3-30B-A3B 仅激活 3B 参数，**在所有非思考（快思考）模式�
 
 同时，本次我们也开源了基于评分细则（rubric）的翻译自动评估方案 [TransRubric](./TransRubric/README_zh.md)，它在 WMT26 翻译评估赛道测试集上的效果超过其他评估方案，相对人工评估的稳定性更高，准确率也高于大多数专业标注员。
 
+也欢迎大家使用我们发布的腾讯Hy翻译浏览器插件，支持划词翻译、整页翻译和侧边栏文本翻译，下载链接：[Chrome](https://chromewebstore.google.com/detail/tencent-hy-translate-a-pe/plkeongecagdacbbldjkoaijdogfkhof?hl=zh-CN)和[Edge](https://microsoftedge.microsoft.com/addons/detail/npohaablejgdcokflkffadojdconaacm)。
+
 ## 新闻
 
 * 2026.11.24  我们在HuggingFace和ModelScope上开源了 **Hy-MT3-1.8B**/**Hy-MT3-7B**/**Hy-MT3-30B-A3B**，并在GitHub上开源了 **TransRubric**
