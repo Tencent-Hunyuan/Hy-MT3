@@ -37,6 +37,15 @@ Hy-MT3-30B-A3B 仅激活 3B 参数，**在所有非思考（快思考）模式�
 
 也欢迎大家使用我们发布的腾讯Hy翻译浏览器插件，支持划词翻译、整页翻译和侧边栏文本翻译，下载链接：[Chrome](https://chromewebstore.google.com/detail/tencent-hy-translate-a-pe/plkeongecagdacbbldjkoaijdogfkhof?hl=zh-CN)和[Edge](https://microsoftedge.microsoft.com/addons/detail/npohaablejgdcokflkffadojdconaacm)。
 
+也可以扫描下方二维码下载腾讯Hy翻译 App（[安卓](https://a.app.qq.com/o/simple.jsp?pkgname=com.tencent.hunyuan.translate) / [iOS](https://apps.apple.com/cn/app/%E8%85%BE%E8%AE%AFhy%E7%BF%BB%E8%AF%91/id6768870541)）：
+
+<table>
+  <tr>
+    <td align="center"><img src="imgs/app_android_qr.png" width="150"/><br>安卓</td>
+    <td align="center"><img src="imgs/app_ios_qr.png" width="150"/><br>iOS</td>
+  </tr>
+</table>
+
 ## 新闻
 
 * 2026.11.24  我们在HuggingFace和ModelScope上开源了 **Hy-MT3-1.8B**/**Hy-MT3-7B**/**Hy-MT3-30B-A3B**，并在GitHub上开源了 **TransRubric**
